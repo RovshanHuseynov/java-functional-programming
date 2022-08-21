@@ -1,10 +1,9 @@
-package imperativeprogramming;
+package lesson2.declarativeapproach;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static imperativeprogramming.Main.Gender.FEMALE;
-import static imperativeprogramming.Main.Gender.MALE;
+import static lesson2.declarativeapproach.Main.Gender.FEMALE;
+import static lesson2.declarativeapproach.Main.Gender.MALE;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,17 +15,10 @@ public class Main {
                 new Person("Alice", FEMALE)
         );
 
-        // Imperative approach
-        List<Person> females = new ArrayList<>();
-        for(Person person : people){
-            if(person.gender.equals(FEMALE)){
-                females.add(person);
-            }
-        }
-
-        for(Person female : females){
-            System.out.println(female);
-        }
+        // Declarative approach
+        people.stream()
+                .filter(person -> person.gender.equals(FEMALE))
+                .forEach(System.out::println);
     }
 
     static class Person {
