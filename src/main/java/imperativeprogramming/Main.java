@@ -28,6 +28,7 @@ public class Main {
         }
     }
 
+
     static class Person {
         private final String name;
         private final Gender gender;
