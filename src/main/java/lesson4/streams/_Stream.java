@@ -1,9 +1,9 @@
-package streams;
+package lesson4.streams;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static streams._Stream.Gender.*;
+import static lesson4.streams._Stream.Gender.*;
 
 public class _Stream {
     public static void main(String[] args) {

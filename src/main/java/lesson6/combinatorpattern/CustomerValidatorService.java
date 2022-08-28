@@ -1,4 +1,4 @@
-package combinatorpattern;
+package lesson6.combinatorpattern;
 
 import java.time.LocalDate;
 import java.time.Period;

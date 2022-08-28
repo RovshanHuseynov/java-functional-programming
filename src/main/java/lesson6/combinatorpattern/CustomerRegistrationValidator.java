@@ -1,11 +1,11 @@
-package combinatorpattern;
+package lesson6.combinatorpattern;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.function.Function;
 
-import static combinatorpattern.CustomerRegistrationValidator.ValidationResult;
-import static combinatorpattern.CustomerRegistrationValidator.ValidationResult.*;
+import static lesson6.combinatorpattern.CustomerRegistrationValidator.ValidationResult;
+import static lesson6.combinatorpattern.CustomerRegistrationValidator.ValidationResult.*;
 
 public interface CustomerRegistrationValidator extends Function<Customer, ValidationResult> {
     static CustomerRegistrationValidator isEmailValid(){
