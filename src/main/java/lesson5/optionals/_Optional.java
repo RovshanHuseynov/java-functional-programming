@@ -2,7 +2,7 @@ package lesson5.optionals;
 
 import java.util.Optional;
 
-public class Main {
+public class _Optional {
     public static void main(String[] args) {
         System.out.println(Optional.ofNullable(null)
                 .orElseGet(() -> "default value"));
