@@ -2,6 +2,8 @@ package lesson4.streams;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,12 +40,45 @@ public class _Streams3 {
 
         // all match
         System.out.println("all match --------------------------");
+        boolean allMatch = people.stream()
+                .allMatch(person -> person.age > 10);
+        System.out.println(allMatch);
 
         // any match
+        System.out.println("any match --------------------------");
+        boolean anyMatch = people.stream()
+                .anyMatch(person -> person.age > 100);
+        System.out.println(anyMatch);
+
         // none match
+        System.out.println("none match --------------------------");
+        boolean noneMatch = people.stream()
+                .noneMatch(person -> person.name.equals("Antonio"));
+        System.out.println(noneMatch);
+
         // max
+        System.out.println("max ---------------------------------");
+        people.stream()
+                .max(((o1, o2) -> o1.age - o2.age))
+                .ifPresentOrElse(System.out::println,
+                        () -> System.out.println("no max found"));
+
         // min
+        System.out.println("min ---------------------------------");
+        people.stream()
+                .min(((o1, o2) -> o1.age - o2.age))
+                .ifPresentOrElse(System.out::println,
+                        () -> System.out.println("no min found"));
+
         // group
+        System.out.println("group ---------------------------------");
+        Map<Gender, List<Person>> groupByGender = people.stream()
+                .collect(Collectors.groupingBy(person -> person.gender));
+
+        groupByGender.forEach(((gender, people1) -> {
+            System.out.println(gender);
+            people1.forEach(System.out::println);
+        }));
     }
 
     static class Person {
