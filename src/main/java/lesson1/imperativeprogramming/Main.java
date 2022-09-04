@@ -7,6 +7,7 @@ import static lesson1.imperativeprogramming.Main.Gender.FEMALE;
 import static lesson1.imperativeprogramming.Main.Gender.MALE;
 
 public class Main {
+    // source: https://www.youtube.com/watch?v=VRpHdSFWGPs
     public static void main(String[] args) {
         List<Person> people = List.of(
                 new Person("John", MALE),
