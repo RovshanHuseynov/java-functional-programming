@@ -2,7 +2,7 @@ package lesson7.finalsection;
 
 import java.util.function.Consumer;
 
-public class Main {
+public class Callbacks {
     public static void main(String[] args) {
         hello("Rovshan", null,
                 firstName -> System.out.println("no lastName is provided for " + firstName));
