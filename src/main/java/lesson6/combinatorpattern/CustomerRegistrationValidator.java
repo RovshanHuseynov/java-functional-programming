@@ -8,6 +8,8 @@ import static lesson6.combinatorpattern.CustomerRegistrationValidator.Validation
 import static lesson6.combinatorpattern.CustomerRegistrationValidator.ValidationResult.*;
 
 public interface CustomerRegistrationValidator extends Function<Customer, ValidationResult> {
+    // main concept of CombinatorPattern is that it returns another Function as result
+    // see here in methods we return CustomerRegistrationValidator
     static CustomerRegistrationValidator isEmailValid(){
         return customer -> customer.getEmail().contains("@")
                 ? SUCCESS : EMAIL_NOT_VALID;

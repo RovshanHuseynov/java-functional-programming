@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import static lesson6.combinatorpattern.CustomerRegistrationValidator.*;
 
 public class Main {
+    // main concept of CombinatorPattern is that it returns another Function as result
     public static void main(String[] args) {
         Customer customer = new Customer(
                 "Alice",
