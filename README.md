@@ -1,3 +1,4 @@
 # java-functional-programming
 
-notes from Amigoscode (https://www.youtube.com/watch?v=VRpHdSFWGPs)
+- all my practice about functional programming
+- notes from Amigoscode  (https://www.youtube.com/c/amigoscode)
