@@ -1,6 +1,7 @@
 package lesson8.practice;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;
@@ -54,6 +55,16 @@ public class Main {
                 .filter(s -> s.startsWith("A"))
                 .forEach(s -> System.out.print(s + ", "));
         System.out.println();
+
+        // 8. Reduction - sum
+        Double total = Stream.of(7.3, 1.5, 4.8)
+                .reduce(0.0, (Double a, Double b) -> a + b);
+        System.out.println(total);
+
+        // 9. Summary statistics
+        IntSummaryStatistics summary = IntStream.of(7, 2, 19, 88, 73, 4, 10)
+                .summaryStatistics();
+        System.out.println(summary);
 
     }
 }
