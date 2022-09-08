@@ -32,5 +32,12 @@ public class Main {
                 .collect(Collectors.toList());
 
         System.out.println(allPhoneNumbers);
+
+        /*
+1. Use map function when we can map one-to-one mapping, whereas flatmap is used for one to many mapping.
+2. map provides mapping for single input, single value whereas flatmap provides mapping single input multiple values
+3. flat map performs data transformation+flattening(flattening is the process of converting multiple lists of lists
+in stream to a single list by merging the values)
+         */
     }
 }
