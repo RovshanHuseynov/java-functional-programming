@@ -38,6 +38,7 @@ public class Main {
 2. map provides mapping for single input, single value whereas flatmap provides mapping single input multiple values
 3. flat map performs data transformation+flattening(flattening is the process of converting multiple lists of lists
 in stream to a single list by merging the values)
+
          */
     }
 }
