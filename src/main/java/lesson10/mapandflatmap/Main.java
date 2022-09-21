@@ -1,11 +1,11 @@
-package lesson10;
+package lesson10.mapandflatmap;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class mapandflatmap {
+public class Main {
     // source: https://www.youtube.com/watch?v=sVX421gaRT4
     public static void main(String[] args) {
         List<Integer> list = List.of(2,10,15,1,9);
