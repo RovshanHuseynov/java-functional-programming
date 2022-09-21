@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
+    // source: https://www.youtube.com/watch?v=CwvlS3ViGFQ
     public static void main(String[] args) {
         List<Customer> customers = Stream.of(
                 new Customer(101, "john", "john@gmail.com", Arrays.asList("397937955", "21654725")),
@@ -17,7 +18,7 @@ public class Main {
         // 1. convert List<Customer> to List<String>   -> Data Transformation
         customers.stream()
                 .map(customer -> customer.getName())
-                .collect(Collectors.toList())
+                //.collect(Collectors.toList())
                 .forEach(value -> System.out.print(value + ", "));
         System.out.println();
 

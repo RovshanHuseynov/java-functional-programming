@@ -25,6 +25,5 @@ public class Main2 {
                 .forEach(s -> System.out.print(s + ", "));
         System.out.println();
         System.out.println("--------------------------------");
-
     }
 }
