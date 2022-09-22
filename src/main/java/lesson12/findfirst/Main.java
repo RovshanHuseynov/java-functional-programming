@@ -2,6 +2,7 @@ package lesson12.findfirst;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,6 +25,16 @@ public class Main {
                 .filter(i -> i%2==0)
                 .findAny()
                 .ifPresent(System.out::println);
+        System.out.println("-------------------------------");
+
+        IntStream.range(1,10).forEach(i -> System.out.print(i + ","));
+        System.out.println();
+        System.out.println("-------------------------------");
+
+        IntStream.range(1,10)
+                .parallel()
+                .forEach(i -> System.out.print(i + ","));
+        System.out.println();
         System.out.println("-------------------------------");
     }
 }
