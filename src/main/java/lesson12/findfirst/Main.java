@@ -36,5 +36,22 @@ public class Main {
                 .forEach(i -> System.out.print(i + ","));
         System.out.println();
         System.out.println("-------------------------------");
+
+        IntStream.rangeClosed(1,10)
+                .forEach(i -> System.out.print(i + ","));
+        System.out.println();
+        System.out.println("-------------------------------");
+
+        IntStream.rangeClosed(1,100)
+                .filter(i -> i%2==0 && i>85)
+                .forEach(i -> System.out.print(i + ","));
+        System.out.println();
+        System.out.println("-------------------------------");
+
+        long count = IntStream.rangeClosed(1, 100)
+                .filter(i -> i % 2 == 0 && i > 85)
+                .count();
+        System.out.println("count: " + count);
+        System.out.println("-------------------------------");
     }
 }
