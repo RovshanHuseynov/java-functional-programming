@@ -1,6 +1,7 @@
 package lesson11.reduce;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -27,6 +28,11 @@ public class Main {
                 });
         System.out.println();
         System.out.println("result1: " + result1);
+        System.out.println("--------------------------");
+
+        list.stream()
+                .max(Comparator.comparingInt(i -> i))
+                .ifPresent(System.out::println);
         System.out.println("--------------------------");
     }
 }
