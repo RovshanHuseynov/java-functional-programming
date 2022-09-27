@@ -34,5 +34,10 @@ public class Main {
                 .max(Comparator.comparingInt(i -> i))
                 .ifPresent(System.out::println);
         System.out.println("--------------------------");
+
+        list.stream()
+                .min(Comparator.comparing(i -> i))
+                .ifPresent(System.out::println);
+        System.out.println("--------------------------");
     }
 }
