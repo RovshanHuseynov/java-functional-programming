@@ -53,5 +53,11 @@ public class Main {
                 .count();
         System.out.println("count: " + count);
         System.out.println("-------------------------------");
+
+        long count1 = IntStream.rangeClosed(100, 200)
+                .filter(i -> i % 11 == 0)
+                .count();
+        System.out.println("count1: " + count1);
+        System.out.println("-------------------------------");
     }
 }
