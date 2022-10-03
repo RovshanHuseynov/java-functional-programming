@@ -2,6 +2,7 @@ package lesson10.mapandflatmap;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main2 {
     // source: https://www.youtube.com/watch?v=CwvlS3ViGFQ
@@ -22,6 +23,13 @@ public class Main2 {
         list2.stream()
                 .flatMap(list -> list.stream())
                 .map(s -> s.toUpperCase())
+                .forEach(s -> System.out.print(s + ", "));
+        System.out.println();
+        System.out.println("--------------------------------");
+
+        List<Integer> list3 = Arrays.asList(6,8,10,12,12,20);
+        list3.stream()
+                .flatMap(i -> Stream.of(i,i/2,i/2+1))
                 .forEach(s -> System.out.print(s + ", "));
         System.out.println();
         System.out.println("--------------------------------");
