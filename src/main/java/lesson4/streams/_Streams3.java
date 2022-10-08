@@ -1,13 +1,12 @@
 package lesson4.streams;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static lesson4.streams._Streams3.Gender.*;
+import static lesson4.streams._Streams3.Gender.FEMALE;
+import static lesson4.streams._Streams3.Gender.MALE;
 
 public class _Streams3 {
     // source: https://www.youtube.com/watch?v=Q93JsQ8vcwY

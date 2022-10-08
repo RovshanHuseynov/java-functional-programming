@@ -3,15 +3,17 @@ package lesson4.streams;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static lesson4.streams._Stream.Gender.*;
+import static lesson4.streams._Streams.Gender.FEMALE;
+import static lesson4.streams._Streams.Gender.MALE;
 
-public class _Stream {
+public class _Streams {
     public static void main(String[] args) {
         List<Person> people = List.of(
                 new Person("John", MALE),
                 new Person("Maria", FEMALE),
                 new Person("Aisha", FEMALE),
                 new Person("Alex", MALE),
+                new Person("Lucas", MALE),
                 new Person("Alice", FEMALE)
         );
 
