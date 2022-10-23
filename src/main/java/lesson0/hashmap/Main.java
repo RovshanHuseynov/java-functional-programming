@@ -19,6 +19,11 @@ public class Main {
         map.put(new Employee("Rovshan", 30), "first");
         System.out.println(map.get(new Employee("Rovshan", 30)));
 
+        /* map.get(object) - object.hashCode() methoduna əsasən gedib lazım olan bucketi
+        tapır. əgər hashCode() methodunu override etməmişiksə map.get() düzgün işləməyəcək
+        yəni gedib biz istədiyimiz elementi tapıb gətirə bilməyəcək
+         */
+
         /* results when hashCode method is overriden
         false
         true
@@ -28,6 +33,7 @@ public class Main {
         97876180
         first
          */
+
         /* results when hashCode method is NOT overriden
         false
         true
