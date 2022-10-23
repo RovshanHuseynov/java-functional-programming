@@ -18,6 +18,7 @@ public class Main {
         Objects.hash();
 
         Employee emp3 = null;
+        // hashCode of a null must be 0
         //System.out.println(emp3.hashCode());
 
         Map<Employee, String> map = new HashMap<>();
