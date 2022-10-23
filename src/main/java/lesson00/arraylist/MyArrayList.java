@@ -24,7 +24,12 @@ public class MyArrayList<T> {
         return size;
     }
 
+    public int getCapacity() {
+        return capacity;
+    }
+
     public void resizeArray(){
+        increaseCapacity();
         Object[] newArray = new Object[capacity];
 
         for(int i=0; i<arrays.length; i++){
@@ -33,7 +38,8 @@ public class MyArrayList<T> {
         this.arrays = newArray;
     }
 
-    public void increaseCapacity(int capacity){
-        capacity = capacity * (3/2) + 1;
+    public void increaseCapacity(){
+        //capacity = capacity * 3 / 2 + 1;
+        capacity = capacity + (capacity >> 1);
     }
 }
