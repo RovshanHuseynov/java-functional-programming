@@ -2,6 +2,7 @@ package lesson0.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +15,10 @@ public class Main {
         System.out.println(emp2);
         System.out.println(emp1.hashCode());
         System.out.println(emp2.hashCode());
+        Objects.hash();
+
+        Employee emp3 = null;
+        System.out.println(emp3.hashCode());
 
         Map<Employee, String> map = new HashMap<>();
         map.put(new Employee("Rovshan", 30), "first");
