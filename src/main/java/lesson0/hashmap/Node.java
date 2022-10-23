@@ -13,6 +13,13 @@ public class Node<K,V> {
         this.next = null;
     }
 
+    public Node(K key, V value, Node<K,V> next) {
+        this.key = key;
+        this.value = value;
+        this.hashCode = key.hashCode();
+        this.next = next;
+    }
+
     public Node(K key, V value, int hashCode, Node<K,V> next) {
         this.key = key;
         this.value = value;

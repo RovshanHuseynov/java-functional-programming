@@ -18,7 +18,7 @@ public class Main {
         Objects.hash();
 
         Employee emp3 = null;
-        System.out.println(emp3.hashCode());
+        //System.out.println(emp3.hashCode());
 
         Map<Employee, String> map = new HashMap<>();
         map.put(new Employee("Rovshan", 30), "first");
@@ -48,5 +48,13 @@ public class Main {
         1134712904
         null
          */
+
+        System.out.println("---------------------------------------------------------");
+        MyHashMap<String, Integer> myMap = new MyHashMap<>();
+        myMap.put("Rovshan", 28);
+        myMap.put("Osman", 23);
+        System.out.println(myMap.get("Rovshan"));
+        System.out.println(myMap.get("Osman"));
+        System.out.println("size: " + myMap.getSize());
     }
 }

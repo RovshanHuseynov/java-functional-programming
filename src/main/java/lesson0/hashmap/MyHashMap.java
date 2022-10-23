@@ -1,35 +1,56 @@
 package lesson0.hashmap;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MyHashMap<K, V> {
     private int capacity;
-    private List<List<Node<K,V>>> bucket;
+    private int size;
+    private Node<K, V>[] buckets;
 
     public MyHashMap() {
-        capacity = 16;
-        bucket = new ArrayList<>(capacity);
+        this.capacity = 16;
+        this.size = 0;
+        this.buckets = new Node[capacity];
     }
 
-    public void put(K key, V value){
-        Node<K, V> newNode = new Node<K, V>(key, value);
+    public void put(K key, V value) {
+        Node<K, V> newNode = new Node<>(key, value);
+        int index = Math.abs(key.hashCode() & (capacity - 1));
+
+        if (buckets[index] == null) {
+            buckets[index] = newNode;
+            size++;
+        } else {
+            Node<K, V> cur = buckets[index];
+            do {
+                if (cur.key.equals(key)) {
+                    // eyni key-dirsə, sadəcə value dəyişmək lazımdırsa
+                    cur.value = value;
+                    break;
+                } else if (cur.next == null) {
+                    // key fərqlidirsə, sadəcə hashCode-u olan key-ə rast gəlmişiksə
+                    cur.next = newNode;
+                    size++;
+                }
+
+                cur = cur.next;
+            } while (cur.next != null);
+        }
+    }
+
+    public V get(K key) {
         int index = key.hashCode() & (capacity - 1);
+        Node<K, V> cur = buckets[index];
 
-        Node<K, V> curNode = bucket.get(index).get(0);
-        int i=0;
-
-        do {
-            if(curNode == null){
-                curNode = newNode;
-            } else{
-                curNode = curNode.next;
+        while(cur != null){
+            if(cur.key.equals(key)){
+                return cur.value;
             }
-        } while (curNode != null);
+            cur = cur.next;
+        }
+
+        return null;
     }
 
-    public V get(K key){
-        int index = key.hashCode() & (capacity - 1);
-        return bucket.get(index).get(0).value;
+    public int getSize() {
+        return size;
     }
 }
