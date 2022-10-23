@@ -1,4 +1,4 @@
-package lesson00.arraylist;
+package lesson0.arraylist;
 
 public class MyArrayList<T> {
     private int capacity;

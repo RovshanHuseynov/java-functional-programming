@@ -1,4 +1,4 @@
-package lesson0.hashmap;
+package lesson0.hashCode;
 
 import java.util.Objects;
 
