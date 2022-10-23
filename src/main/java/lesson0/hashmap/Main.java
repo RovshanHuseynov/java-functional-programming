@@ -24,8 +24,8 @@ public class Main {
         map.put(new Employee("Rovshan", 30), "first");
         System.out.println(map.get(new Employee("Rovshan", 30)));
 
-        /* map.get(object) - object.hashCode() methoduna əsasən gedib lazım olan bucketi
-        tapır. əgər hashCode() methodunu override etməmişiksə map.get() düzgün işləməyəcək
+        /* map.get(object) - object.hashCode() & (capacity - 1) düsturuna əsasən gedib lazım olan
+        bucketi tapır. əgər hashCode() methodunu override etməmişiksə map.get() düzgün işləməyəcək
         yəni gedib biz istədiyimiz elementi tapıb gətirə bilməyəcək
          */
 
@@ -55,6 +55,5 @@ public class Main {
         myMap.put("Osman", 23);
         System.out.println(myMap.get("Rovshan"));
         System.out.println(myMap.get("Osman"));
-        System.out.println("size: " + myMap.getSize());
     }
 }

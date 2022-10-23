@@ -1,13 +1,11 @@
 package lesson0.hashmap;
 
 public class MyHashMap<K, V> {
-    private int capacity;
-    private int size;
-    private Node<K, V>[] buckets;
+    private final int capacity;
+    private final Node<K, V>[] buckets;
 
     public MyHashMap() {
         this.capacity = 16;
-        this.size = 0;
         this.buckets = new Node[capacity];
     }
 
@@ -17,7 +15,6 @@ public class MyHashMap<K, V> {
 
         if (buckets[index] == null) {
             buckets[index] = newNode;
-            size++;
         } else {
             Node<K, V> cur = buckets[index];
             do {
@@ -28,7 +25,6 @@ public class MyHashMap<K, V> {
                 } else if (cur.next == null) {
                     // key fərqlidirsə, sadəcə hashCode-u olan key-ə rast gəlmişiksə
                     cur.next = newNode;
-                    size++;
                 }
 
                 cur = cur.next;
@@ -48,9 +44,5 @@ public class MyHashMap<K, V> {
         }
 
         return null;
-    }
-
-    public int getSize() {
-        return size;
     }
 }
