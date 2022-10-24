@@ -10,13 +10,16 @@ public class MyLinkedList<T> {
             head = newNode;
         } else {
             Node<T> cur = head;
-
-            do {
-                if(cur.next == null) cur.next = newNode;
-
+            while (true){
+                if(cur.next == null){
+                    cur.next = newNode;
+                    break;
+                }
                 cur = cur.next;
-            } while(cur.next != null);
+            }
         }
+
+        System.out.println("addLast: " + value);
     }
 
     public int getTail(){
@@ -24,12 +27,22 @@ public class MyLinkedList<T> {
 
         Node<T> cur = head;
 
-        do {
+        while (true){
             if(cur.next == null) return cur.value;
-
             cur = cur.next;
-        } while(cur.next != null);
+        }
+    }
 
-        return -1;
+    public int size(){
+        int cnt = 0;
+        Node<T> cur = head;
+
+        while (cur != null){
+                cnt++;
+                cur = cur.next;
+        }
+
+        System.out.println("size: " + cnt);
+        return cnt;
     }
 }
