@@ -1,4 +1,4 @@
-package lesson0.hashmap;
+package lesson0.hashMap;
 
 public class Main {
     // source video: https://www.youtube.com/watch?v=-oafFAPgLao

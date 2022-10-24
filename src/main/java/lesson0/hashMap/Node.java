@@ -1,4 +1,4 @@
-package lesson0.hashmap;
+package lesson0.hashMap;
 
 public class Node<K,V> {
     K key;
