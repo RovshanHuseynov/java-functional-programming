@@ -1,10 +1,22 @@
 package lesson0.hashCode;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Main {
     // source video: https://www.youtube.com/watch?v=CpVALR9HeTE
+    // source video: https://www.youtube.com/watch?v=-oafFAPgLao
     public static void main(String[] args) {
+        Map<Employee, String> map = new HashMap<>();
+        map.put(new Employee("Rovshan", 30), "first");
+        System.out.println(map.get(new Employee("Rovshan", 30)));
+
+        /* map.get(object) - object.hashCode() & (capacity - 1) düsturuna əsasən gedib lazım olan
+        bucketi tapır. əgər hashCode() methodunu override etməmişiksə map.get() düzgün işləməyəcək
+        yəni gedib biz istədiyimiz elementi tapıb gətirə bilməyəcək
+         */
+
         Employee emp1 = new Employee("Rovshan", 30);
         Employee emp2 = new Employee("Rovshan", 30);
 
@@ -18,7 +30,7 @@ public class Main {
 
         Employee emp3 = null;
         // hashCode of a null must be 0
-        //System.out.println(emp3.hashCode());
+        System.out.println(Objects.hashCode(emp3));
 
         /* results when hashCode method is overriden
         false

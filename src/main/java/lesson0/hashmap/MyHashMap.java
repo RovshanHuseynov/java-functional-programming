@@ -11,7 +11,7 @@ public class MyHashMap<K, V> {
 
     public void put(K key, V value) {
         Node<K, V> newNode = new Node<>(key, value);
-        int index = Math.abs(key.hashCode() & (capacity - 1));
+        int index = getBucketIndex(key);
 
         if (buckets[index] == null) {
             buckets[index] = newNode;
@@ -33,7 +33,7 @@ public class MyHashMap<K, V> {
     }
 
     public V get(K key) {
-        int index = key.hashCode() & (capacity - 1);
+        int index = getBucketIndex(key);
         Node<K, V> cur = buckets[index];
 
         while(cur != null){
@@ -44,5 +44,11 @@ public class MyHashMap<K, V> {
         }
 
         return null;
+    }
+
+    private int getBucketIndex(K key) {
+        int index = Math.abs(key.hashCode() & (capacity - 1));
+        System.out.println("bucket index: " + index + " for: " + key);
+        return index;
     }
 }
