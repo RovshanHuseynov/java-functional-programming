@@ -38,8 +38,8 @@ public class MyLinkedList<T> {
         Node<T> cur = head;
 
         while (cur != null){
-                cnt++;
-                cur = cur.next;
+            cnt++;
+            cur = cur.next;
         }
 
         System.out.println("size: " + cnt);
