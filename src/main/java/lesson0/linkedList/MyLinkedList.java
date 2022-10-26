@@ -45,4 +45,16 @@ public class MyLinkedList<T> {
         System.out.println("size: " + cnt);
         return cnt;
     }
+
+    public int sizeRecursion(Node<T> curNode, int curSize){
+        if(curNode == null) {
+            System.out.println("sizeRecursion: " + curSize);
+            return curSize;
+        }
+        return sizeRecursion(curNode.next, curSize+1);
+    }
+
+    public Node<T> getHead(){
+        return head;
+    }
 }
