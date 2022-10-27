@@ -19,13 +19,27 @@ public class MyLinkedList<T> {
         System.out.println("addLast: " + value);
     }
 
-    public T getTail(){
-        Node<T> cur = head;
+    public void addFirst(T val){
+        Node<T> newNode = new Node<>(val);
 
-        while (true){
-            if(cur.next == null) return cur.value;
+        if(head != null) {
+            newNode.next = head;
+        }
+        head = newNode;
+    }
+
+    public T getTail(){
+        if(head == null) return null;
+
+        Node<T> cur = head;
+        while (cur.next != null){
             cur = cur.next;
         }
+        return cur.value;
+    }
+
+    public Node<T> getHead(){
+        return head;
     }
 
     public int size(){
@@ -49,7 +63,12 @@ public class MyLinkedList<T> {
         return sizeRecursion(curNode.next, curSize+1);
     }
 
-    public Node<T> getHead(){
-        return head;
+    public void print(){
+        Node<T> cur = head;
+
+        while(cur != null){
+            System.out.print(cur.value + " ");
+            cur = cur.next;
+        }
     }
 }
