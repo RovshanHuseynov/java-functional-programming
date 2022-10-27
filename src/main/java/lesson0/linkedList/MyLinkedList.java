@@ -64,11 +64,13 @@ public class MyLinkedList<T> {
     }
 
     public void print(){
+        System.out.print("LinkedList: ");
         Node<T> cur = head;
 
         while(cur != null){
-            System.out.print(cur.value + " ");
+            System.out.print(cur.value + ", ");
             cur = cur.next;
         }
+        System.out.println();
     }
 }

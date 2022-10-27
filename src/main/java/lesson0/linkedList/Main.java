@@ -20,22 +20,29 @@ public class Main {
 
         System.out.println("--------------------------------------");
         MyLinkedList<String> linkedListString = new MyLinkedList<>();
-
+        linkedListString.print();
         linkedListString.size();
         linkedListString.sizeRecursion(linkedListString.getHead(), 0);
         linkedListString.addLast("first");
+        linkedListString.print();
         linkedListString.size();
         linkedListString.sizeRecursion(linkedListString.getHead(), 0);
         linkedListString.addLast("second");
+        linkedListString.print();
         linkedListString.size();
         linkedListString.sizeRecursion(linkedListString.getHead(), 0);
         linkedListString.addLast("third");
+        linkedListString.print();
         linkedListString.size();
         linkedListString.sizeRecursion(linkedListString.getHead(), 0);
         linkedListString.addLast("fourth");
+        linkedListString.print();
         linkedListString.size();
         linkedListString.sizeRecursion(linkedListString.getHead(), 0);
         linkedListString.addFirst("zero");
+        linkedListString.print();
+        linkedListString.size();
+        linkedListString.sizeRecursion(linkedListString.getHead(), 0);
 
         System.out.println("getTail: " + linkedListString.getTail());
         System.out.println("getHead: " + linkedListString.getHead());
