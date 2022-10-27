@@ -50,7 +50,7 @@ public class MyLinkedList<T> {
         return head;
     }
 
-    public int size(){
+    public int sizeLoop(){
         int cnt = 0;
         Node<T> cur = head;
 
@@ -70,7 +70,7 @@ public class MyLinkedList<T> {
         return 1 + sizeRecursion(curNode.next);
     }
 
-    public void print(){
+    public void printLoop(){
         System.out.print("LinkedList: ");
         Node<T> cur = head;
 
@@ -79,6 +79,10 @@ public class MyLinkedList<T> {
             cur = cur.next;
         }
         System.out.println();
+    }
+
+    public void printRecursion(){
+
     }
 
     public boolean isEmpty(){
