@@ -45,8 +45,10 @@ public class Main {
         System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
         linkedListString.removeFirst();
         linkedListString.printLoop();
+        linkedListString.printRecursion(linkedListString.getHead());
         linkedListString.sizeLoop();
         System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        System.out.println("isEmpty: " + linkedListString.isEmpty());
 
         System.out.println("getTail: " + linkedListString.getTail());
         System.out.println("getHead: " + linkedListString.getHead());

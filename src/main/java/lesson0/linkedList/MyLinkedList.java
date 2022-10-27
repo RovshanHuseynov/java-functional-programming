@@ -74,7 +74,7 @@ public class MyLinkedList<T> {
     }
 
     public void printLoop(){
-        System.out.print("LinkedList: ");
+        System.out.print("printLoop LinkedList: ");
         Node<T> cur = head;
 
         while(cur != null){
@@ -84,8 +84,17 @@ public class MyLinkedList<T> {
         System.out.println();
     }
 
-    public void printRecursion(){
+    public void printRecursion(Node<T> curNode){
+        if(curNode == head){
+            System.out.print("printRecursion LinkedList: ");
+        }
 
+        if(curNode != null){
+            System.out.print(curNode.value + ", ");
+            printRecursion(curNode.next);
+        } else {
+            System.out.println();
+        }
     }
 
     public boolean isEmpty(){
