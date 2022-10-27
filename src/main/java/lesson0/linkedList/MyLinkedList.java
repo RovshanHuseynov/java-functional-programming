@@ -28,16 +28,6 @@ public class MyLinkedList<T> {
         head = newNode;
     }
 
-    public T getTail(){
-        if(head == null) return null;
-
-        Node<T> cur = head;
-        while (cur.next != null){
-            cur = cur.next;
-        }
-        return cur.value;
-    }
-
     public boolean removeFirst() {
         if(head == null) return false;
 
@@ -56,6 +46,16 @@ public class MyLinkedList<T> {
             }
             cur = cur.next;
         }
+    }
+
+    public T getTail(){
+        if(head == null) return null;
+
+        Node<T> cur = head;
+        while (cur.next != null){
+            cur = cur.next;
+        }
+        return cur.value;
     }
 
     public Node<T> getHead(){
@@ -82,6 +82,10 @@ public class MyLinkedList<T> {
         return 1 + sizeRecursion(curNode.next);
     }
 
+    public boolean isEmpty(){
+        return head == null;
+    }
+
     public void printLoop(){
         System.out.print("printLoop LinkedList: ");
         Node<T> cur = head;
@@ -106,7 +110,30 @@ public class MyLinkedList<T> {
         }
     }
 
-    public boolean isEmpty(){
-        return head == null;
+    public void printReverseRecursion(Node cur){
+    }
+
+    public Node reverse(Node head){
+        return null;
+    }
+
+    public Node merge(Node cur1, Node cur2){
+        return null;
+    }
+
+    public int sum(Node cur){
+        return 0;
+    }
+
+    public int hasCycle(Node cur) {
+        return 0;
+    }
+
+    public int hasCycle2(Node head){
+        return 0;
+    }
+
+    public Node detectCycle(Node cur){
+        return null;
     }
 }
