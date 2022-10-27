@@ -38,6 +38,14 @@ public class MyLinkedList<T> {
         return cur.value;
     }
 
+    public boolean removeFirst() {
+        return false;
+    }
+
+    public boolean removeLast(){
+        return false;
+    }
+
     public Node<T> getHead(){
         return head;
     }
@@ -55,12 +63,11 @@ public class MyLinkedList<T> {
         return cnt;
     }
 
-    public int sizeRecursion(Node<T> curNode, int curSize){
+    public int sizeRecursion(Node<T> curNode){
         if(curNode == null) {
-            System.out.println("sizeRecursion: " + curSize);
-            return curSize;
+            return 0;
         }
-        return sizeRecursion(curNode.next, curSize+1);
+        return 1 + sizeRecursion(curNode.next);
     }
 
     public void print(){
@@ -72,5 +79,9 @@ public class MyLinkedList<T> {
             cur = cur.next;
         }
         System.out.println();
+    }
+
+    public boolean isEmpty(){
+        return head == null;
     }
 }
