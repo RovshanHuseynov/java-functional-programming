@@ -39,7 +39,10 @@ public class MyLinkedList<T> {
     }
 
     public boolean removeFirst() {
-        return false;
+        if(head == null) return false;
+
+        head = head.next;
+        return true;
     }
 
     public boolean removeLast(){
