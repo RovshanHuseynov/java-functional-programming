@@ -10,13 +10,10 @@ public class MyLinkedList<T> {
             head = newNode;
         } else {
             Node<T> cur = head;
-            while (true){
-                if(cur.next == null){
-                    cur.next = newNode;
-                    break;
-                }
+            while (cur.next != null){
                 cur = cur.next;
             }
+            cur.next = newNode;
         }
 
         System.out.println("addLast: " + value);
