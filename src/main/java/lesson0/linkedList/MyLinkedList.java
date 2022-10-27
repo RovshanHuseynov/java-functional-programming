@@ -45,8 +45,17 @@ public class MyLinkedList<T> {
         return true;
     }
 
-    public boolean removeLast(){
-        return false;
+    public boolean removeLast() {
+        Node<T> cur = head;
+        while (true) {
+            if (cur == null || cur.next == null) {
+                return false;
+            } else if (cur.next.next == null) {
+                cur.next = null;
+                return true;
+            }
+            cur = cur.next;
+        }
     }
 
     public Node<T> getHead(){

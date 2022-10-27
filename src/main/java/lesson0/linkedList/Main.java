@@ -43,7 +43,11 @@ public class Main {
         linkedListString.printLoop();
         linkedListString.sizeLoop();
         System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
-        linkedListString.removeFirst();
+        System.out.println("removeFirst: " + linkedListString.removeFirst());
+        System.out.println("removeFirst: " + linkedListString.removeFirst());
+        System.out.println("removeFirst: " + linkedListString.removeFirst());
+        System.out.println("removeLast: " + linkedListString.removeLast());
+        System.out.println("removeLast: " + linkedListString.removeLast());
         linkedListString.printLoop();
         linkedListString.printRecursion(linkedListString.getHead());
         linkedListString.sizeLoop();
