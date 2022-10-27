@@ -3,7 +3,7 @@ package lesson0.linkedList;
 public class MyLinkedList<T> {
     private Node<T> head;
 
-    public void addLast(int value){
+    public void addLast(T value){
         Node<T> newNode = new Node<>(value);
 
         if(head == null){
@@ -22,9 +22,7 @@ public class MyLinkedList<T> {
         System.out.println("addLast: " + value);
     }
 
-    public int getTail(){
-        if(head == null) return -1;
-
+    public T getTail(){
         Node<T> cur = head;
 
         while (true){

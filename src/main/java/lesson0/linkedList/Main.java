@@ -16,6 +16,6 @@ public class Main {
         linkedList.sizeRecursion(linkedList.getHead(), 0);
         linkedList.addLast(10);
 
-        System.out.println("GetTail: " + linkedList.getTail());
+        System.out.println("getTail: " + linkedList.getTail());
     }
 }

@@ -1,15 +1,15 @@
 package lesson0.linkedList;
 
 public class Node<T> {
-    int value;
+    T value;
     Node<T> next;
 
-    public Node(int value) {
+    public Node(T value) {
         this.value = value;
         this.next = null;
     }
 
-    public Node(int value, Node<T> next) {
+    public Node(T value, Node<T> next) {
         this.value = value;
         this.next = next;
     }
