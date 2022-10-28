@@ -71,7 +71,7 @@ public class MyLinkedList<T> {
             cur = cur.next;
         }
 
-        System.out.println("size: " + cnt);
+        System.out.println("sizeLoop: " + cnt);
         return cnt;
     }
 
@@ -87,7 +87,7 @@ public class MyLinkedList<T> {
     }
 
     public void printLoop(){
-        System.out.print("printLoop LinkedList: ");
+        System.out.print("printLoop: ");
         Node<T> cur = head;
 
         while(cur != null){
@@ -99,7 +99,7 @@ public class MyLinkedList<T> {
 
     public void printRecursion(Node<T> curNode){
         if(curNode == head){
-            System.out.print("printRecursion LinkedList: ");
+            System.out.print("printRecursion: ");
         }
 
         if(curNode != null){
@@ -110,7 +110,24 @@ public class MyLinkedList<T> {
         }
     }
 
-    public void printReverseRecursion(Node cur){
+    public void printReverseRecursion(Node<T> cur){
+        if(cur != null) printReverseRecursion(cur.next);
+
+        if(head == null) {
+            System.out.println("printReverseRecursion: ");
+            return;
+        }
+        if(cur == null) {
+            System.out.print("printReverseRecursion: ");
+            return;
+        }
+
+
+        if(cur == head){
+            System.out.println(cur.value);
+        } else {
+            System.out.print(cur.value + ", ");
+        }
     }
 
     public Node reverse(Node head){

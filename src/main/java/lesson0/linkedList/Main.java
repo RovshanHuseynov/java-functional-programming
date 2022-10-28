@@ -20,41 +20,34 @@ public class Main {
 
         System.out.println("--------------------------------------");
         MyLinkedList<String> linkedListString = new MyLinkedList<>();
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         linkedListString.addLast("first");
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         linkedListString.addLast("second");
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         linkedListString.addLast("third");
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         linkedListString.addLast("fourth");
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         linkedListString.addFirst("zero");
-        linkedListString.printLoop();
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         System.out.println("removeFirst: " + linkedListString.removeFirst());
         System.out.println("removeFirst: " + linkedListString.removeFirst());
         System.out.println("removeFirst: " + linkedListString.removeFirst());
         System.out.println("removeLast: " + linkedListString.removeLast());
         System.out.println("removeLast: " + linkedListString.removeLast());
-        linkedListString.printLoop();
-        linkedListString.printRecursion(linkedListString.getHead());
-        linkedListString.sizeLoop();
-        System.out.println("sizeRecursion: " + linkedListString.sizeRecursion(linkedListString.getHead()));
+        printLinkedList(linkedListString);
         System.out.println("isEmpty: " + linkedListString.isEmpty());
 
         System.out.println("getTail: " + linkedListString.getTail());
         System.out.println("getHead: " + linkedListString.getHead());
+    }
+
+    public static void printLinkedList(MyLinkedList<String> linkedList){
+        linkedList.sizeLoop();
+        System.out.println("sizeRecursion: " + linkedList.sizeRecursion(linkedList.getHead()));
+        linkedList.printLoop();
+        linkedList.printRecursion(linkedList.getHead());
+        linkedList.printReverseRecursion(linkedList.getHead());
     }
 }
