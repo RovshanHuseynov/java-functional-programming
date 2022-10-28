@@ -138,8 +138,16 @@ public class MyLinkedList<T> {
         return null;
     }
 
-    public int sum(Node cur){
-        return 0;
+    public int sum(){
+        int sum = 0;
+        Node<T> cur = head;
+
+        while(cur != null){
+            sum += (int) cur.value;
+            cur = cur.next;
+        }
+
+        return sum;
     }
 
     public int hasCycle(Node cur) {

@@ -17,6 +17,7 @@ public class Main {
         linkedListInteger.addLast(10);
 
         System.out.println("sizeRecursion: " + linkedListInteger.sizeRecursion(linkedListInteger.getHead()));
+        System.out.println("sum: " + linkedListInteger.sum());
 
         System.out.println("--------------------------------------");
         MyLinkedList<String> linkedListString = new MyLinkedList<>();
