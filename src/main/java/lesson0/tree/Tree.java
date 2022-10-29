@@ -4,8 +4,6 @@ public class Tree {
     Node head;
 
     public void add(int value){
-        System.out.println("--------------------------");
-        System.out.println("add: " + value);
         Node newNode = new Node(value);
 
         if(head == null) head = newNode;
@@ -13,10 +11,8 @@ public class Tree {
             Node cur = head;
 
             while (true) {
-                System.out.println("cur " + cur.value);
                 if (value < cur.value) {
                     if (cur.left == null) {
-                        System.out.println("sola yaz " + value);
                         cur.left = newNode;
                         break;
                     } else {
@@ -24,7 +20,6 @@ public class Tree {
                     }
                 } else {
                     if (cur.right == null) {
-                        System.out.println("saga yaz " + value);
                         cur.right = newNode;
                         break;
                     } else {
@@ -33,5 +28,13 @@ public class Tree {
                 }
             }
         }
+    }
+
+    public void printInOrderTraversal(Node cur){
+        if(cur == head) System.out.print("printInOrder: ");
+
+        if(cur.left != null) printInOrderTraversal(cur.left);
+        System.out.print(cur.value + " ");
+        if(cur.right != null) printInOrderTraversal(cur.right);
     }
 }

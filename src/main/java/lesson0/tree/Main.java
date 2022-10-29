@@ -10,5 +10,8 @@ public class Main {
         tree.add(10);
         tree.add(9);
         tree.add(16);
+
+        tree.printInOrderTraversal(tree.head);
+        System.out.println();
     }
 }
