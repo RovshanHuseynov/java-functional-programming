@@ -1,12 +1,12 @@
-package lesson0.linkedList;
+package lesson0.tree;
 
-public class Node<T> {
-    T value;
-    Node<T> next;
+public class Node {
+    int value;
+    Node left;
+    Node right;
 
-    public Node(T value) {
+    public Node(int value) {
         this.value = value;
-        this.next = null;
     }
 
     @Override
