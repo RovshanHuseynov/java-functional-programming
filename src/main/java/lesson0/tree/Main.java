@@ -13,5 +13,7 @@ public class Main {
 
         tree.printInOrderTraversal(tree.head);
         System.out.println();
+        tree.printPostOrderTraversal(tree.head);
+        System.out.println();
     }
 }

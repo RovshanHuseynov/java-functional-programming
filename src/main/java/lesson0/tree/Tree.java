@@ -37,4 +37,12 @@ public class Tree {
         System.out.print(cur.value + " ");
         if(cur.right != null) printInOrderTraversal(cur.right);
     }
+
+    public void printPostOrderTraversal(Node cur){
+        if(cur == head) System.out.print("printPostOrderTraversal: ");
+
+        if(cur.left != null) printPostOrderTraversal(cur.left);
+        if(cur.right != null) printPostOrderTraversal(cur.right);
+        System.out.print(cur.value + " ");
+    }
 }
