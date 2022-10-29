@@ -30,6 +30,14 @@ public class Tree {
         }
     }
 
+    public void printPreOrderTraversal(Node cur){
+        if(cur == head) System.out.print("printPreOrderTraversal: ");
+
+        System.out.print(cur.value + " ");
+        if(cur.left != null) printPreOrderTraversal(cur.left);
+        if(cur.right != null) printPreOrderTraversal(cur.right);
+    }
+
     public void printInOrderTraversal(Node cur){
         if(cur == head) System.out.print("printInOrder: ");
 

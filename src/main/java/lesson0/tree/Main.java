@@ -11,6 +11,8 @@ public class Main {
         tree.add(9);
         tree.add(16);
 
+        tree.printPreOrderTraversal(tree.head);
+        System.out.println();
         tree.printInOrderTraversal(tree.head);
         System.out.println();
         tree.printPostOrderTraversal(tree.head);
