@@ -3,7 +3,7 @@ package lesson0.tree;
 public class Tree {
     Node head;
 
-    public void add(int value){
+    public void addLoop(int value){
         Node newNode = new Node(value);
 
         if(head == null) head = newNode;
@@ -26,6 +26,29 @@ public class Tree {
                         cur = cur.right;
                     }
                 }
+            }
+        }
+    }
+
+    public void addRecursion(Node cur, int value){
+        Node newNode = new Node(value);
+
+        if(cur == head && cur == null) {
+            head = newNode;
+            return;
+        }
+
+        if(value < cur.value){
+            if(cur.left == null){
+                cur.left = newNode;
+            } else {
+                addRecursion(cur.left, value);
+            }
+        } else {
+            if(cur.right == null){
+                cur.right = newNode;
+            } else {
+                addRecursion(cur.right, value);
             }
         }
     }
